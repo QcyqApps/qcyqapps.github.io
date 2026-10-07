@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ground Telegraphs · AoE & Skill Indicators for URP · QcyqApps</title>
+  <meta name="description" content="Procedural ground telegraphs for Unity URP: circles, rings, cones, lines and arrows with cast-progress fills, terrain projection and a pooled one-line API.">
+  <meta property="og:title" content="Ground Telegraphs · AoE & Skill Indicators for URP">
+  <meta property="og:description" content="Five shapes in exact metres, cast-progress fills, terrain projection, pooled one-line API. Unity 6, URP.">
+  <meta property="og:image" content="https://qcyqapps.github.io/assets/img/gt-social.jpg">
+  <meta property="og:url" content="https://qcyqapps.github.io/ground-telegraphs/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon-180.png">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../"><img src="../assets/img/qcyqapps-mark-on-dark.svg" alt=""><b>Qcyq</b><span>Apps</span></a>
+      <nav class="nav">
+        <a href="../#games">Games</a>
+        <a href="../#assets" class="hide-sm">Unity assets</a>
+        <a href="../#about" class="hide-sm">About</a>
+        <a href="../support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <h1>Ground Telegraphs</h1>
+        <p>Procedural AoE and skill indicators for the Universal Render Pipeline. They show players where the hit
+          will land, and they stay readable on bumpy floors, slopes and terrain.</p>
+        <div class="actions" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px">
+          <a class="btn primary" href="demo/">Play the WebGL demo</a>
+          <span class="btn disabled">Unity Asset Store: coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="gallery">
+          <img src="../assets/img/gt-04_boss_attacks.jpg" alt="A boss casting a donut, circles and a charge line">
+          <img src="../assets/img/gt-01_shapes.jpg" alt="Circle, ring, cone, line and arrow">
+          <img src="../assets/img/gt-03_uneven_ground.jpg" alt="Telegraphs on raised tiles, a mound and around pillars">
+          <img src="../assets/img/gt-05_terrain.jpg" alt="Projected telegraphs draping over hilly terrain">
+          <img src="../assets/img/gt-07_aiming.jpg" alt="An always-on-top aim cone next to depth-tested casts">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Features</h2>
+        <ul class="features">
+          <li>Five shapes: circle, ring, cone with an optional inner radius, line, arrow</li>
+          <li>Sizes in exact metres: borders and glows keep their width at any size</li>
+          <li>Cast progress that grows outward, grows inward or sweeps, with a moving edge and a completion flash</li>
+          <li>Flat mode with ground tolerance for uneven floors</li>
+          <li>Projected mode that drapes over terrain and props and fades out on walls</li>
+          <li>Depth tested for danger zones, always on top for aim previews</li>
+          <li>Styles are materials: HDR colours, edge glow, stripes or ripples, pulse, alpha or additive</li>
+          <li>Pooled one-line API, plus hit tests that use exactly the shape players see</li>
+          <li>Fade, flash, hold or loop; callbacks, events, manual time stepping</li>
+          <li>GPU instancing, scene handles, live Edit Mode preview</li>
+          <li>Four demo scenes and full offline documentation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>One line to cast</h2>
+        <pre><code>Telegraphs.Circle(target, 4f, danger).Play(1.5f, () =&gt; DealDamage(target));</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Requirements</h2>
+        <table class="spec">
+          <tr><td>Unity</td><td>6000.0 or newer (tested on 6000.0 LTS and 6000.6)</td></tr>
+          <tr><td>Render pipeline</td><td>URP 17+: Forward, Forward+ and Deferred; perspective and orthographic cameras</td></tr>
+          <tr><td>Projected mode</td><td>Camera Depth Texture (the inspector can enable it)</td></tr>
+          <tr><td>Not supported</td><td>Built-in Render Pipeline, HDRP</td></tr>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Adrian Śliwka · QcyqApps</span>
+      <span><a href="../support.html">Support</a> · <a href="mailto:a.sliwka92@gmail.com">a.sliwka92@gmail.com</a></span>
+    </div>
+  </footer>
+</body>
+</html>
